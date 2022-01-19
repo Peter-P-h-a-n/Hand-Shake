@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/handshake-me",
+      "handler": "user.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/users/login-session",
+      "handler": "user.loginSession",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/users/authenticate",
+      "handler": "user.authenticate",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

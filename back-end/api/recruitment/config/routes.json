@@ -1,0 +1,116 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/recruitments",
+      "handler": "recruitment.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/me/recruitments",
+      "handler": "recruitment.findAllByUser",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/recruitments/count",
+      "handler": "recruitment.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/recruitments/:id/slug",
+      "handler": "recruitment.getContractSlug",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/recruitments/:slug/jd",
+      "handler": "recruitment.getContractBySlug",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/recruitments/:id",
+      "handler": "recruitment.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/recruitments",
+      "handler": "recruitment.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/recruitments/:id/contract",
+      "handler": "recruitment.createContract",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/recruitments/:slug/sign",
+      "handler": "recruitment.signContract",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/recruitments/:id/submit",
+      "handler": "recruitment.submit",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/recruitments/:id/approve",
+      "handler": "recruitment.approveContract",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/recruitments/:id/report",
+      "handler": "recruitment.report",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/recruitments/:id",
+      "handler": "recruitment.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/recruitments/:id",
+      "handler": "recruitment.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

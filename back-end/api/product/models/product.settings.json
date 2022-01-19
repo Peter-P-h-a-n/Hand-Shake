@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "product"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false,
+    "populateCreatorFields": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "recruitment": {
+      "model": "recruitment",
+      "via": "product"
+    },
+    "url": {
+      "type": "richtext"
+    },
+    "watermark": {
+      "type": "richtext"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

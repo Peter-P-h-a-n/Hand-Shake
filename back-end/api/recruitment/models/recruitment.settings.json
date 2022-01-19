@@ -1,0 +1,93 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recruitments",
+  "info": {
+    "name": "Recruitment"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false,
+    "populateCreatorFields": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "deadline": {
+      "type": "datetime"
+    },
+    "salary": {
+      "type": "string",
+      "default": "0"
+    },
+    "deposit": {
+      "type": "string",
+      "default": "0"
+    },
+    "contact": {
+      "type": "string"
+    },
+    "recruiter": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "employee": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "isPublish": {
+      "type": "boolean",
+      "default": true
+    },
+    "contractId": {
+      "type": "integer",
+      "default": 0
+    },
+    "creContractHash": {
+      "type": "string",
+      "private": true
+    },
+    "contractSlug": {
+      "type": "string",
+      "private": true
+    },
+    "signContractHash": {
+      "type": "string",
+      "private": true
+    },
+    "completeContractHash": {
+      "type": "string",
+      "private": true
+    },
+    "unCompleteContractHash": {
+      "type": "string",
+      "private": true
+    },
+    "whoFault": {
+      "type": "integer",
+      "default": 0
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "NEW",
+        "ON_PROCESS",
+        "SUBMITTED",
+        "DONE",
+        "UN_COMPLETE",
+        "REPORT",
+        "FAILED"
+      ],
+      "default": "NEW"
+    },
+    "product": {
+      "via": "recruitment",
+      "model": "product"
+    }
+  }
+}
